@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles.css" rel="stylesheet">
     <link href="/navBar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/landing.css">
+    <script >
 
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelectorAll(".slide");
+    const slideCount = slides.length;
+    let currentIndex = 0;
+  
+    // Function to move to the next slide
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slideCount;
+      slides[currentIndex].classList.remove("active");
+      slides[nextIndex].classList.add("active");
+      currentIndex = nextIndex;
+    }
+  
+    // Auto slide change
+    function autoSlide() {
+      nextSlide();
+      setTimeout(autoSlide, 5000); // Change slide every 5 seconds (adjust as needed)
+    }
+  
+    // Start auto slide change
+    autoSlide();
+  });
+  
+    </script>
 
     <title>olea</title>
 </head>
@@ -29,13 +56,13 @@
             </div>
         </div>
     </nav>
-    <h1 class="text-2xl font-bold bg-red-950">This is in layout file</h1>
+
     <main>
 
         <%- body %>
     </main>
     <footer>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        
         <p class="copy">Copyright © 2023 Olea.org. All rights reserved.</p>
     </footer>
 </body>
