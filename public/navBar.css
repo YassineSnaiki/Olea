@@ -62,8 +62,19 @@ nav .logo span {
     transform: scale(110%);
 }
 
+.menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+.menu img {
+    width: 100%;
+}
 @media(max-width:756px){
     .navigation-bar .links {
         display: none;
+    }
+    .menu {
+        display: block;
     }
 }

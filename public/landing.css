@@ -25,7 +25,7 @@
     height: 100%;
     display: block;
     transition: transform 0.5s ease; /* Smooth scaling transition */
-    filter: blur(2px) brightness(30%) grayscale(60%);
+    filter: blur(2px) brightness(50%) grayscale(60%);
   }
   
   .slide.active {
@@ -80,6 +80,7 @@
     color: rgb(54, 52, 52);
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 0 3px 2px rgb(83, 83, 83) ;
   }
   .buttons .btn:first-child{
     background-color: #00FF94;
@@ -88,7 +89,8 @@
     background-color: #8DFFDD;
   }
   .buttons .btn:hover {
-    box-shadow: 0 0 5px 3px rgb(83, 83, 83) inset;
+    box-shadow: 0 0 6px 4px rgb(83, 83, 83) ;
+    transform: scale(90%);
     color: rgb(72, 72, 72);
   }
   @media(max-width:1048px){
@@ -119,5 +121,37 @@
     }
     .slider-container {
         width: 95%;
+    }
+  }
+  .down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 30px;
+    height: 48px;
+    border-radius: 20px;
+    border:solid 2px  #f0f0f0;
+  }
+  .down-arr {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+
+    animation: moveDown 1s infinite;
+}
+@keyframes moveDown {
+    0% {
+      bottom: 30px;
+    }
+    50% {
+      bottom: 10px;
+    }
+    100% {
+      bottom: 30px;
     }
   }
