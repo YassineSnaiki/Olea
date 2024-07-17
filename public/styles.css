@@ -1,4 +1,41 @@
-body  {
-    background-color: blue;
+/* Reset box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global typography */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #b0b9ac46;
+  }
+  
+  /* Basic styling for links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+
+  
+  /* Container styles */
+  .container {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center align the container */
+   
+  }
+footer {
+    color: white;
+    background-color: #09714d70;
+
+    
 }
- 
+footer .copy {
+    width: 100%;
+    text-align: center;
+}

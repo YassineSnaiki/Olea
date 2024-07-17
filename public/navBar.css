@@ -1,0 +1,63 @@
+nav {
+    width: 80%;
+    border-radius: 8px;
+    background-color: #83C8AB;
+    margin: 10px auto;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.174);
+}
+nav .container {
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo {
+    position: relative;
+}
+nav .logo img {
+    height: 80px;
+}
+nav .logo span {
+    font-size: 22px;
+    position: absolute;
+    left: 43px;
+    top: 40px;
+}
+.navigation-bar {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navigation-bar .links {
+    display: flex;
+    gap: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px -2px rgb(0 64 0 / 35%);
+
+}
+.navigation-bar .links a {
+    background-color: #80BCA3;
+    display: block;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.navigation-bar .links a:hover {
+   background-color: #649782;
+    transform: scale(95%);
+    border-radius: 8px;
+}
+.navigation-bar .profile {
+    height: 30px;
+}
+.navigation-bar .profile-image {
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.navigation-bar .profile-image:hover {
+    box-shadow: 0 0 4px 0px rgba(0, 47, 12, 0.482);
+    transform: scale(110%);
+}

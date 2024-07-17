@@ -26,7 +26,9 @@ app.get('/', function(req, res) {
 app.get('/about', (req, res) => {
     res.render('about');
 });
-
+app.get('/stades',(req,res)=>{
+    res.render('stades')
+})
 // Start the server
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
