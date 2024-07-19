@@ -66,6 +66,7 @@ nav .logo span {
     display: none;
     width: 30px;
     height: 30px;
+    position: relative;
 }
 .menu img {
     width: 100%;
@@ -77,4 +78,35 @@ nav .logo span {
     .menu {
         display: block;
     }
+}
+.mobile-links {
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.491);
+}
+.mobile-links a {
+    display: block;
+    width: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: #669b85;;
+    transition: 0.3s;
+    
+}
+.mobile-links a:hover {
+    padding-left: 25px;
+    color: #92cab3;
+}
+.menu:hover .mobile-links {
+    visibility: visible;
+    opacity: 1;
 }

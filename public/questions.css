@@ -1,0 +1,127 @@
+.carousel-section {
+    padding: 20px;
+}
+
+.carousel-container {
+
+    height: 300px;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    /* background: #4D4B4B; */
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.306);
+    position: relative;
+
+}
+
+.carousel-slide {
+    display: none;
+    padding: 40px;
+    position: relative;
+    height: 100%;
+    
+    
+}
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(60%);
+    z-index: 0;
+}
+.carousel-slide.active {
+    display: block;
+}
+
+.question-box, .answer-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.297);
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 44;
+    
+}
+@media(max-width : 576px) {
+    .question-box,.answer-box {
+        font-size: 12px;
+    }
+}
+.question-box {
+    bottom: 50%;
+    left: 25px;
+    transform: translateX(-20px);
+}
+
+.answer-box {
+    top: 50%;
+    right: 25px;
+    transform: translateX(20px);
+}
+
+.carousel-slide.active .question-box, .carousel-slide.active .answer-box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    width: 0;
+    height: 20px;
+    border: 10px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+.arrow.left  {
+    border-right: solid 10px rgba(255, 255, 255, 0.5);
+}
+.arrow.right {
+    border-left: solid 10px  rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #00ff7b;
+}

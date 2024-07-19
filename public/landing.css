@@ -2,7 +2,6 @@
 .slider-container {
     width: 80%;
     margin: 0 auto;
-    
     position: relative;
   }
   
@@ -122,6 +121,9 @@
     }
     .slider-container {
         width: 95%;
+    }
+    .buttons .btn {
+      font-size: 14px;
     }
   }
   .down {
