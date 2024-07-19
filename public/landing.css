@@ -52,14 +52,14 @@
     background-color: rgba(255, 255, 255, 0.315);
   }
   .landing-title {
-    font-size: 54px;
+    font-size: 40px;
     font-weight: bold;
 
   }
-  .landing-paragraph  {
-    font-size: 32px;
+  .landing-paragraph {
+    font-size: 26px;
     font-weight: lighter;
-  }
+}
   .buttons {
     position: absolute;
     left: 25%;
@@ -75,7 +75,7 @@
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     color: rgb(54, 52, 52);
     cursor: pointer;
     transition: 0.3s;

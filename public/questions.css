@@ -4,11 +4,10 @@
 
 .carousel-container {
 
-    height: 300px;
+    height: 500px;
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    /* background: #4D4B4B; */
     border: 1px solid #ddd;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.306);
@@ -59,14 +58,14 @@
     }
 }
 .question-box {
-    bottom: 50%;
-    left: 25px;
+    bottom: 60%;
+    left: 20px;
     transform: translateX(-20px);
 }
 
 .answer-box {
-    top: 50%;
-    right: 25px;
+    top: 40%;
+    right: 20px;
     transform: translateX(20px);
 }
 
