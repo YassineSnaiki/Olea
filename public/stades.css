@@ -24,6 +24,8 @@
     .stade {
      flex-basis: 45%;
      margin-bottom: 50px;
+     display: flex;
+     flex-direction: column;
     }
      .img{
        width: 150px;
@@ -42,9 +44,27 @@
        margin-left: 2px;
    
      }
+     .stade-paragraph  li {
+      display: block;
+      padding: 5px 20px;
+     }
+     .stade-paragraph  li:nth-child(2n+1) {
+      background-color: white;
+     }
        .stade-header{
          margin-top: 10px;
          font-size: 14px;
          color: darkgreen;
        }
-   
+   @media(max-width : 648px) {
+    .container1 {
+      flex-direction: column;
+      align-items: center;
+    }
+    .stade {
+      align-items: center;
+    }
+    .stade li {
+      text-align: center;
+    }
+   }

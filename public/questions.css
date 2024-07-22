@@ -4,11 +4,10 @@
 
 .carousel-container {
 
-    height: 300px;
+    height: 500px;
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    /* background: #4D4B4B; */
     border: 1px solid #ddd;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.306);
@@ -53,20 +52,27 @@
     z-index: 44;
     
 }
+@media(max-width:968px) {
+    .question-box,.answer-box {
+        font-size: 16px;
+    }
+}
+
+
 @media(max-width : 576px) {
     .question-box,.answer-box {
         font-size: 12px;
     }
 }
 .question-box {
-    bottom: 50%;
-    left: 25px;
+    bottom: 60%;
+    left: 27px;
     transform: translateX(-20px);
 }
 
 .answer-box {
-    top: 50%;
-    right: 25px;
+    top: 30%;
+    right: 27px;
     transform: translateX(20px);
 }
 
@@ -91,13 +97,21 @@
     border: 10px solid transparent;
     position: relative;
     cursor: pointer;
+    transition: 0.3s;
 }
 .arrow.left  {
     border-right: solid 10px rgba(255, 255, 255, 0.5);
 }
+.arrow.left:hover  {
+    border-right: solid 10px rgb(255, 255, 255);
+}
 .arrow.right {
     border-left: solid 10px  rgba(255, 255, 255, 0.5);
 }
+.arrow.right:hover {
+    border-left: solid 10px rgb(255, 255, 255);
+}
+
 
 
 
