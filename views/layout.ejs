@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
+    <link href="/navBar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="/stades.css">
+    <link rel="stylesheet" href="/overview.css">
+    <link rel="stylesheet" href="/questions.css">
+    <link rel="stylesheet" href="/statistics.css">
+    <script src="/landing.js">
+    </script>
+    <script src="/questions.js"></script>
+    <title>olea</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <span>Olea</span>
+            </div>
+            <div class="navigation-bar">
+                <div class="menu">
+                    <img  src="/images/menuIcon.png" alt="">
+                    <ul class="mobile-links">
+                        <li><a href="/">accueil</a></li>
+                        <li><a href="/stades">culture</a></li>
+                        <li><a href="/stades">croissance</a></li>
+                        <li><a href="#footer">contactez-nous</a></li>
+                    </ul>
+                </div>
+                <ul class="links">
+                    <li><a href="/">accueil</a></li>
+                    <li><a href="/stades">Culture</a></li>
+                    <li><a href="/stades">croissance</a></li>
+                    <li><a href="#footer">Contactez-nous</a></li>
+                </ul>
+                <a href="" class="profile">
+                    <img src="/images/profile.png" alt="profile" class="profile-image">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <%- body %>
+    </main>
+    
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Nous nous engageons à fournir des informations complètes sur les olives et les meilleures pratiques pour leur entretien tout au long de l'année.</p>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3>Contactez-nous</h3>
+                <p>Email: info@olives.com</p>
+                <p>téléphone: +123-456-7890</p>
+                <p>Adresse: 123 rue des olives,olive city.ol</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2023 Olea.org. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
