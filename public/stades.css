@@ -8,9 +8,9 @@
      font-size: 20px;
      
      font-weight:bold ;
-     color: saddlebrown;
+     color: white;
      text-align: center;
-     background-color: rgba(255, 158, 12, 0.865);
+     background-color: #83C8AB;
    
     }
      .container1{
@@ -30,7 +30,7 @@
        height: 150px;
        border-radius: 50%;
        object-fit: cover;
-       box-shadow: 0 4px 8px;color: rgb(255, 153, 0);
+       box-shadow: 0 6px 20px;color: rgba(21, 237, 9, 0.66);
    
      }
    
