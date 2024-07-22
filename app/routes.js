@@ -1,10 +1,22 @@
-module.exports = function(app, passport, isAuthenticated) {
+module.exports = function(app, passport) {
+
+    // Middleware to save the original URL
+    function isAuthenticated(req, res, next) {
+        if (req.isAuthenticated()) {
+            return next();
+        }
+        // Save the original URL to redirect after login
+        req.session.returnTo = req.originalUrl;
+        res.redirect('/login'); // Redirect to login if not authenticated
+    }
 
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-        res.render('index.ejs'); // Load the index.ejs file
+        res.render('index.ejs', {
+            isAuthenticated: req.isAuthenticated()
+        }); // Load the index.ejs file with authentication state
     });
 
     // =====================================
@@ -12,7 +24,9 @@ module.exports = function(app, passport, isAuthenticated) {
     // =====================================
     // Show the login form
     app.get('/login', function(req, res) {
-        res.render('login.ejs', { message: req.flash('loginMessage') }); // Render login.ejs with flash messages
+        res.render('login.ejs', {
+            message: req.flash('loginMessage')
+        }); // Render login.ejs with flash messages
     });
 
     // Process the login form
@@ -20,7 +34,7 @@ module.exports = function(app, passport, isAuthenticated) {
         passport.authenticate('local-login', function(err, user, info) {
             if (err) { return next(err); }
             if (!user) { return res.redirect('/login'); }
-            
+
             req.logIn(user, function(err) {
                 if (err) { return next(err); }
 
@@ -41,7 +55,9 @@ module.exports = function(app, passport, isAuthenticated) {
     // =====================================
     // Show the signup form
     app.get('/signup', function(req, res) {
-        res.render('signup.ejs', { message: req.flash('signupMessage') }); // Render signup.ejs with flash messages
+        res.render('signup.ejs', {
+            message: req.flash('signupMessage')
+        }); // Render signup.ejs with flash messages
     });
 
     // Process the signup form
@@ -80,15 +96,5 @@ module.exports = function(app, passport, isAuthenticated) {
     app.get('/stades', isAuthenticated, (req, res) => {
         res.render('stades.ejs'); // Load stades.ejs file
     });
-
-    // Middleware to save the original URL
-    function isAuthenticated(req, res, next) {
-        if (req.isAuthenticated()) {
-            return next();
-        }
-        // Save the original URL to redirect after login
-        req.session.returnTo = req.originalUrl;
-        res.redirect('/login'); // Redirect to login if not authenticated
-    }
 
 };

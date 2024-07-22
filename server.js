@@ -37,11 +37,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-// Middleware to check authentication
+// Middleware to make `isAuthenticated` available in all views
+app.use((req, res, next) => {
+    res.locals.isAuthenticated = req.isAuthenticated();
+    res.locals.user = req.user; // Optionally pass user info
+    next();
+});
+
+// Authentication middleware
 function isAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
+    req.session.returnTo = req.originalUrl; // Save the original URL
     res.redirect('/login'); // Redirect to login if not authenticated
 }
 
