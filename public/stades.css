@@ -8,7 +8,7 @@
      font-size: 20px;
      
      font-weight:bold ;
-     color: white;
+     color: rgb(255, 255, 255);
      text-align: center;
      background-color: #83C8AB;
    
@@ -32,16 +32,19 @@
        height: 150px;
        border-radius: 50%;
        object-fit: cover;
-       box-shadow: 0 6px 20px;color: rgba(21, 237, 9, 0.66);
+       box-shadow: 0 50px 70px;color: rgba(11, 103, 6, 0.66)
+       ;
+       
+     
    
      }
    
      .stade-paragraph{
-       margin-top: 30px;
+       margin-top: 30px; 
        font-size: 14px;
        color: black;
        text-align:justify;
-       margin-left: 2px;
+       margin-left: 2px; 
    
      }
      .stade-paragraph  li {
@@ -49,7 +52,7 @@
       padding: 5px 20px;
      }
      .stade-paragraph  li:nth-child(2n+1) {
-      background-color: white;
+      background-color: rgb(248, 245, 239);
      }
        .stade-header{
          margin-top: 10px;
