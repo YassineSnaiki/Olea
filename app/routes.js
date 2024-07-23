@@ -93,6 +93,11 @@ module.exports = function(app, passport) {
         res.render('about.ejs'); // Load about.ejs file
     });
 
+    app.get('/recolte',isAuthenticated, function(req, res) {
+        res.render('recolte.ejs'); // Redirect to the homepage after logout
+    });
+
+    
     app.get('/stades', isAuthenticated, (req, res) => {
         res.render('stades.ejs'); // Load stades.ejs file
     });
