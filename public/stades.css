@@ -1,8 +1,10 @@
-.photo1{
+.stades-image{
+    width: 80%;
+    margin: 0 auto;
+
+   }
+   .stades-image img {
     width: 100%;
-    height: fit-content;
-   
-   
    }
    .section-header{
      font-size: 20px;

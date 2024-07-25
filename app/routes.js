@@ -1,6 +1,5 @@
-const express = require('express');
 const pool = require('../config/database');
-const passport = require('passport');
+
 
 // Middleware to check if the user is an admin
 function isAdmin(req, res, next) {
@@ -42,7 +41,7 @@ module.exports = function(app, passport, isAuthenticated) {
                     delete req.session.returnTo;
                     return res.redirect(redirectUrl); // Redirect to the originally requested URL
                 } else {
-                    return res.redirect('/profile'); // Default redirect for regular users
+                    return res.redirect('/'); // Default redirect for regular users
                 }
             });
         })(req, res, next);
@@ -74,17 +73,9 @@ module.exports = function(app, passport, isAuthenticated) {
         res.redirect('/');
     });
 
-    // Protected routes
-    app.get('/about', isAuthenticated, (req, res) => {
-        res.render('about.ejs', {
-            user: req.user // Pass the user object to the template
-        });
-    });
 
     app.get('/recolte', isAuthenticated, (req, res) => {
-        res.render('recolte.ejs', {
-            user: req.user // Pass the user object to the template
-        });
+        res.render('recolte.ejs');
     });
 
     // Agenda display route
