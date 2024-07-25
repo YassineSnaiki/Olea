@@ -112,29 +112,35 @@ nav .logo span {
     opacity: 1;
 }
 
-.profile > a {
-    text-align: center;
-    visibility: hidden;
-    opacity: .5;
-    width: 0px;
-    overflow: hidden;
+.profile > .profile-links {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 0;
-    border-radius: 50px;
-    background-color: #649782;
     z-index: 11;
-    transition: .3s;
+    visibility: hidden;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
-.profile:hover > a {
-    width: 100px;
-    top: 100%;
+.profile-links a {
+    display: block;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #649782b6;
+    transition: .3s;
+    width: fit-content;
+}
+.profile:hover > .profile-links {
+    top: 105%;
     visibility: visible;
     opacity: 1;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.584);
 }
-.profile a:hover {
+.profile-links a:hover {
     background-color: #81c5a9;
 }

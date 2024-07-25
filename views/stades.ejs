@@ -115,7 +115,7 @@
         </div>
  </div>
  <h2 class="section-header">Agenda</h2>
- <div class="agenda">
+ <!-- <div class="agenda">
 
     <div class="agenda-item">
         <div class="flip-card">
@@ -144,7 +144,7 @@
             </div>
         </div>
         <span class="item-title">
-            lFloraison des fleurs
+            Floraison des fleurs
         </span>
     </div>
     <div class="agenda-item">
@@ -192,8 +192,26 @@
             Maturation complète
         </span>
     </div>
- </div>
-
+ </div> -->
+<div class="agenda">
+    <% agendaItems.forEach(item => { %>
+      <div class="agenda-item">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <p><%= item.month %></p>
+            </div>
+            <div class="flip-card-back">
+              <img src="<%= item.image_url %>" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <span class="item-title">
+          <%= item.change_name %>
+        </span>
+      </div>
+    <% }); %>
+  </div>
 
 
 

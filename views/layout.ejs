@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/login.css">
     <link rel="stylesheet" href="/agenda.css">
     <link rel="stylesheet" href="/recolte.css">
+    <link rel="stylesheet" href="/manage-agenda.css">
     <script src="/landing.js">
     </script>
     <script src="/questions.js"></script>
@@ -41,10 +42,20 @@
                     <li><a href="/recolte">recolte</a></li>
                     <li><a href="#footer">Contactez-nous</a></li>
                 </ul>
-                <span href="" class="profile">
+                <!-- <span href="" class="profile">
                     <img src="/images/profile.png" alt="profile" class="profile-image">
                     <a href="/logout">Logout</a>
+                </span> -->
+                <span href="" class="profile">
+                    <img src="/images/profile.png" alt="profile" class="profile-image">
+                    <div class="profile-links">
+                        <a href="/logout" class="logout">Logout</a>
+                    <% if (user && user.role === 'admin') { %>
+                        <a href="/manage-agenda" class="manage">Manage Agenda</a>
+                    <% } %>
+                    </div>
                 </span>
+                
             </div>
         </div>
     </nav>
