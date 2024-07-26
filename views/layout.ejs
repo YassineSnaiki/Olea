@@ -42,16 +42,13 @@
                     <li><a href="/recolte">recolte</a></li>
                     <li><a href="#footer">Contactez-nous</a></li>
                 </ul>
-                <!-- <span href="" class="profile">
-                    <img src="/images/profile.png" alt="profile" class="profile-image">
-                    <a href="/logout">Logout</a>
-                </span> -->
+
                 <span href="" class="profile">
                     <img src="/images/profile.png" alt="profile" class="profile-image">
                     <div class="profile-links">
-                        <a href="/logout" class="logout">Logout</a>
+                        <a href="/logout" class="logout">Déconnecter</a>
                     <% if (user && user.role === 'admin') { %>
-                        <a href="/manage-agenda" class="manage">Manage Agenda</a>
+                        <a href="/manage-agenda" class="manage">Gerer Agenda</a>
                     <% } %>
                     </div>
                 </span>
@@ -73,8 +70,8 @@
             
             <div class="footer-section contact">
                 <h3>Contactez-nous</h3>
-                <p>Email: info@olives.com</p>
-                <p>téléphone: +123-456-7890</p>
+                <p>Email: olea@olives.com</p>
+                <p>téléphone: +123-###-####</p>
                 <p>Adresse: 123 rue des olives,olive city.ol</p>
             </div>
             <div class="footer-section follow-us">

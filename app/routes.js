@@ -60,12 +60,6 @@ module.exports = function(app, passport, isAuthenticated) {
         failureFlash: true
     }));
 
-    // Profile route
-    app.get('/profile', isAuthenticated, (req, res) => {
-        res.render('profile.ejs', {
-            user: req.user
-        });
-    });
 
     // Logout route
     app.get('/logout', (req, res) => {

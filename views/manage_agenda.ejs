@@ -1,5 +1,5 @@
 <div class="agenda-items-container">
-    <h2>Current Agenda Items</h2>
+    <h2>Elements de l'Agenda </h2>
     <ul>
         <% agendaItems.forEach(item => { %>
             <li class="modify-item">
@@ -7,27 +7,27 @@
                 <form action="/manage-agenda/edit/<%= item.id %>" method="POST" class="modify-form">
                     <div class="image-field">
                         <img src="<%= item.image_url %>" alt="Image" class="modify-image">
-                        <input type="text" name="image_url" value="<%= item.image_url %>" required placeholder="Image URL">
+                        <input type="text" name="image_url" value="<%= item.image_url %>" required placeholder="Url de l'image ">
                     </div>
                     <div class="text-field">
-                        <input type="text" name="month" value="<%= item.month %>" required placeholder="Month">
-                    <input type="text" name="change_name" value="<%= item.change_name %>" required placeholder="Change Name">
+                        <input type="text" name="month" value="<%= item.month %>" required placeholder="Mois">
+                    <input type="text" name="change_name" value="<%= item.change_name %>" required placeholder="Nom de changement">
                     </div>
-                    <button type="submit">Update</button>
+                    <button type="submit">mis à jour</button>
                 </form>
                 <form action="/manage-agenda/delete/<%= item.id %>" method="POST" style="display: inline;">
-                    <button type="submit" class="btn-remove">Remove</button>
+                    <button type="submit" class="btn-remove">Enleve</button>
                 </form>
             </li>
         <% }); %>
     </ul>
-    <h2>Add New Agenda Item</h2>
+    <h2>Ajouter nouveau element</h2>
     <form action="/manage-agenda/add" method="POST" class="form-add-item">
         <div class="inputs">
-            <input type="text" id="image_url" name="image_url" required placeholder="Image URL">
-            <input type="text" id="month" name="month" required placeholder="Month">
-            <input type="text" id="change_name" name="change_name" required placeholder="Change Name">
+            <input type="text" id="image_url" name="image_url" required placeholder="Url de l'image">
+            <input type="text" id="month" name="month" required placeholder="Mois">
+            <input type="text" id="change_name" name="change_name" required placeholder="Nom de changement">
         </div>
-        <button type="submit">Add Item</button>
+        <button type="submit">Ajouter</button>
     </form>
 </div>
